@@ -3,8 +3,6 @@ MAINTAINER Alexander Gorokhov <sashgorokhov@gmail.com>
 
 RUN apt-get install -y unzip git
 
-ENV DNX_PATH "C:\Users\Doga\.dnx\bin"
-
 ENV SERVER_URL="" \
     AGENT_OWN_ADDRESS="" \
     AGENT_OWN_PORT="9090" \
@@ -12,6 +10,8 @@ ENV SERVER_URL="" \
     AGENT_DIR="/opt/teamcity_agent"
 ENV AGENT_WORKDIR=$AGENT_DIR"/work_dir" \
     AGENT_TEMPDIR=$AGENT_DIR"/temp_dir"
+
+ENV DNX_PATH "C:\Users\Doga\.dnx\bin"
 
 EXPOSE $AGENT_OWN_PORT
 VOLUME $AGENT_WORKDIR $AGENT_TEMPDIR
